@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a08ed653-16e2-4af6-88f9-e7be84260fe9/deploy-status)](https://app.netlify.com/sites/skymb/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
