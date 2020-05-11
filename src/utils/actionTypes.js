@@ -1,0 +1,1 @@
+export const LOAD_SKYMBA_DATA = "LOAD_SKYMBA_DATA";
