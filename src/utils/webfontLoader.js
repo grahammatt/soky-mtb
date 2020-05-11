@@ -2,6 +2,6 @@ import { load } from "webfontloader";
 
 load({
   google: {
-    families: ["Roboto:400,700", "sans-serif"],
+    families: ["Quicksand:300,400,500,700", "sans-serif"],
   },
 });
