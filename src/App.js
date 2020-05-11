@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import { CssBaseline, ThemeProvider } from "@material-ui/core";
 import { HeaderBar } from "./components";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { getTrailData } from "./utils/kymbaScraper.js";
 import { theme } from "./App.styles";
-
+import { Trails } from "./views";
 const App = () => {
-  const { trails } = useSelector((state) => state);
   const dispatch = useDispatch();
 
   //run once, on component mount
@@ -18,7 +17,7 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <HeaderBar />
-      {JSON.stringify(trails)}
+      <Trails />
     </ThemeProvider>
   );
 };
