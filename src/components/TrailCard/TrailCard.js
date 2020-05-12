@@ -7,23 +7,31 @@ import {
   Typography,
 } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-//import { useStyles } from "./HeaderBar.styles";
+import { conditionsMap } from "../../utils/trailConditions";
+import { useStyles } from "./TrailCard.styles";
 
 const TrailCard = ({ trail }) => {
-  //const classes = useStyles();
+  const condition = conditionsMap[trail.status];
+  const classes = useStyles({ color: condition.color });
+
   return (
-    <Card>
+    <Card className={classes.root}>
       <CardHeader
         avatar={
-          <Avatar>
-            <FontAwesomeIcon icon={["fad", "biking-mountain"]} />
+          <Avatar className={classes.avatar}>
+            <FontAwesomeIcon size="lg" icon={["fal", condition.icon]} />
           </Avatar>
         }
         title={trail.name}
-        subheader={trail.status}
+        subheader={condition.status}
+        titleTypographyProps={{ variant: "h6" }}
+        subheaderTypographyProps={{ variant: "subtitle1" }}
       />
       <CardContent>
-        <Typography variant="body1" color="textSecondary" component="p">
+        <Typography variant="body1" gutterBottom>
+          {condition.message}
+        </Typography>
+        <Typography variant="body2" color="textSecondary">
           Last Updated: {trail.updated}
         </Typography>
       </CardContent>

@@ -1,5 +1,13 @@
-import { createMuiTheme } from "@material-ui/core/styles";
+import { createMuiTheme, makeStyles } from "@material-ui/core/styles";
 
+export const useStyles = makeStyles((theme) => ({
+  root: {
+    maxWidth: "100vw",
+    maxHeight: "100vh",
+    overflowX: "hidden",
+  },
+  toolbar: theme.mixins.toolbar,
+}));
 export const theme = createMuiTheme({
   typography: {
     useNextVariants: true,
