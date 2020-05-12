@@ -10,7 +10,7 @@ const Trails = () => {
   return (
     <Grid container spacing={2} className={classes.root}>
       {trails.map((trail) => (
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid key={trails.name} item xs={12} sm={6} md={4}>
           <TrailCard trail={trail} />
         </Grid>
       ))}
