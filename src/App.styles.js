@@ -2,8 +2,8 @@ import { createMuiTheme, makeStyles } from "@material-ui/core/styles";
 
 export const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: "100vw",
-    maxHeight: "100vh",
+    width: "100vw",
+    height: "100vh",
     overflowX: "hidden",
   },
   toolbar: theme.mixins.toolbar,
