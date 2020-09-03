@@ -10,9 +10,10 @@ const App = () => {
   const dispatch = useDispatch();
 
   //run once, on component mount
+  //eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     getTrailData(dispatch);
-  }, []);
+  }, []); //eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <ThemeProvider theme={theme}>
