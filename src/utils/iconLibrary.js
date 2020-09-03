@@ -4,6 +4,7 @@ import {
   faSnowflakes,
   faExclamationTriangle,
   faCloudShowers,
+  faSyncAlt,
 } from "@fortawesome/pro-light-svg-icons";
 
 /**
@@ -13,5 +14,6 @@ library.add(
   faBikingMountain,
   faSnowflakes,
   faExclamationTriangle,
-  faCloudShowers
+  faCloudShowers,
+  faSyncAlt
 );
